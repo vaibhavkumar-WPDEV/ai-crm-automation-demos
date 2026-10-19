@@ -1,0 +1,106 @@
+{
+  "rows": [
+    {
+      "id": "E1",
+      "from": "anna@sampleco.test",
+      "subject": "Pricing for the pilot",
+      "result": {
+        "category": "pricing",
+        "confidence": 0.92,
+        "fields": {
+          "users": 25,
+          "start_by": "15 nov"
+        }
+      },
+      "draft": "Our plans start with a fixed-scope pilot. A team member will send a quote after a short call.",
+      "contact": {
+        "name": "Anna Lee",
+        "company": "SampleCo",
+        "stage": "Discovery"
+      },
+      "flags": [],
+      "status": "Approved, CRM updated"
+    },
+    {
+      "id": "E2",
+      "from": "raj@demo-retail.test",
+      "subject": "Can't log in",
+      "result": {
+        "category": "support",
+        "confidence": 0.95,
+        "fields": {
+          "urgent": true
+        }
+      },
+      "draft": "Thanks for flagging this. Our support team will review it and reply within one business day.",
+      "contact": {
+        "name": "Raj Mehta",
+        "company": "Demo Retail",
+        "stage": "Proposal"
+      },
+      "flags": [],
+      "status": "Approved, CRM updated"
+    },
+    {
+      "id": "E3",
+      "from": "new@unknown.test",
+      "subject": "Quick call?",
+      "result": {
+        "category": "meeting",
+        "confidence": 0.7,
+        "fields": {}
+      },
+      "draft": "Happy to find a time. Could you share two slots that suit you?",
+      "contact": null,
+      "flags": [
+        "Low confidence (0.7), human decides",
+        "Sender not in CRM, no record updated until a person matches/creates it"
+      ],
+      "status": "Needs human"
+    },
+    {
+      "id": "E4",
+      "from": "anna@sampleco.test",
+      "subject": "Re: invoice",
+      "result": {
+        "category": "unclear",
+        "confidence": 0.3,
+        "fields": {}
+      },
+      "draft": null,
+      "contact": {
+        "name": "Anna Lee",
+        "company": "SampleCo",
+        "stage": "Discovery"
+      },
+      "flags": [
+        "Low confidence (0.3), human decides",
+        "Could not classify"
+      ],
+      "status": "Needs human"
+    },
+    {
+      "id": "E5",
+      "from": "raj@demo-retail.test",
+      "subject": "Meeting next week",
+      "result": {
+        "category": "meeting",
+        "confidence": 0.9,
+        "fields": {
+          "budget_usd": 12000
+        }
+      },
+      "draft": "Happy to find a time. Could you share two slots that suit you?",
+      "contact": {
+        "name": "Raj Mehta",
+        "company": "Demo Retail",
+        "stage": "Proposal"
+      },
+      "flags": [],
+      "status": "Approved, CRM updated"
+    }
+  ],
+  "events": [
+    "E5: AI step failed (timeout), retry 1"
+  ]
+}

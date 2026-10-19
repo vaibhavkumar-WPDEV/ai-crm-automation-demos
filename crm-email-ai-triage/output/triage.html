@@ -1,0 +1,26 @@
+<!doctype html><meta charset=utf-8><title>CRM email triage (demo)</title>
+<style>body{font:15px system-ui;margin:32px;max-width:940px;color:#1c2430;background:#f6f7f9}h1{font-size:22px;margin:0 0 4px}
+.demo{background:#fff7e0;border:1px solid #ecd28a;padding:8px 12px;border-radius:6px;margin:12px 0;font-size:13px}
+.row{background:#fff;border:1px solid #dfe3e8;border-radius:8px;padding:12px 14px;margin-bottom:10px}.sub2{font-weight:600;margin:4px 0}.meta{color:#5b6573;font-size:13px}
+.draft{background:#eef3fb;border-radius:6px;padding:6px 10px;margin:6px 0;font-size:14px}.b{padding:2px 9px;border-radius:12px;font-size:12px;margin-left:8px}
+.ok{background:#d9f2e1;color:#14663a}.wait{background:#fff0c9;color:#7a5a00}.stop{background:#fbdada;color:#8a1f1f}
+.flag{background:#fbdada;color:#8a1f1f;border-radius:4px;padding:2px 7px;font-size:12px;margin-right:8px;display:inline-block;margin-top:2px}
+.log{background:#fff;border:1px solid #dfe3e8;border-radius:8px;padding:8px 14px;font-size:13px;color:#5b6573}</style>
+<h1>Email triage into the CRM</h1><div>Email in -> classify -> extract -> draft from approved text -> person approves -> CRM updated</div>
+<div class=demo>Demo with made-up emails and a fake in-memory CRM. Classifier is rule based; no live HubSpot or AI provider connected.</div>
+<div class=row><div><b>E1</b> anna@sampleco.test <span class='b ok'>Approved, CRM updated</span></div>
+<div class=sub2>Pricing for the pilot</div>
+<div class=meta>Category: pricing (0.92) | Extracted: users: 25, start_by: 15 nov | CRM: SampleCo / Discovery</div>
+<div class=draft>Draft from approved text: Our plans start with a fixed-scope pilot. A team member will send a quote after a short call.</div><div></div></div><div class=row><div><b>E2</b> raj@demo-retail.test <span class='b ok'>Approved, CRM updated</span></div>
+<div class=sub2>Can&#x27;t log in</div>
+<div class=meta>Category: support (0.95) | Extracted: urgent: True | CRM: Demo Retail / Proposal</div>
+<div class=draft>Draft from approved text: Thanks for flagging this. Our support team will review it and reply within one business day.</div><div></div></div><div class=row><div><b>E3</b> new@unknown.test <span class='b stop'>Needs human</span></div>
+<div class=sub2>Quick call?</div>
+<div class=meta>Category: meeting (0.7) | Extracted: none | CRM: not found</div>
+<div class=draft>Draft from approved text: Happy to find a time. Could you share two slots that suit you?</div><div><span class=flag>Low confidence (0.7), human decides</span><span class=flag>Sender not in CRM, no record updated until a person matches/creates it</span></div></div><div class=row><div><b>E4</b> anna@sampleco.test <span class='b stop'>Needs human</span></div>
+<div class=sub2>Re: invoice</div>
+<div class=meta>Category: unclear (0.3) | Extracted: none | CRM: SampleCo / Discovery</div>
+<div class=draft>No draft (not enough to answer safely)</div><div><span class=flag>Low confidence (0.3), human decides</span><span class=flag>Could not classify</span></div></div><div class=row><div><b>E5</b> raj@demo-retail.test <span class='b ok'>Approved, CRM updated</span></div>
+<div class=sub2>Meeting next week</div>
+<div class=meta>Category: meeting (0.9) | Extracted: budget_usd: 12000 | CRM: Demo Retail / Proposal</div>
+<div class=draft>Draft from approved text: Happy to find a time. Could you share two slots that suit you?</div><div></div></div><div class=log><b>Step failures handled:</b> E5: AI step failed (timeout), retry 1</div>

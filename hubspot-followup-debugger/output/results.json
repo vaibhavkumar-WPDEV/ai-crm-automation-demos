@@ -1,0 +1,47 @@
+[
+  {
+    "id": "A",
+    "scenario": "Books call, nothing else happens",
+    "expected": 1,
+    "before": 1,
+    "after": 1,
+    "before_ok": true,
+    "after_ok": true
+  },
+  {
+    "id": "B",
+    "scenario": "Reschedules during the delay",
+    "expected": 0,
+    "before": 2,
+    "after": 0,
+    "before_ok": false,
+    "after_ok": true
+  },
+  {
+    "id": "C",
+    "scenario": "Completes the next step (call held) during the delay",
+    "expected": 0,
+    "before": 1,
+    "after": 0,
+    "before_ok": false,
+    "after_ok": true
+  },
+  {
+    "id": "D",
+    "scenario": "Reschedules twice (re-enrols while first run still waiting)",
+    "expected": 0,
+    "before": 3,
+    "after": 0,
+    "before_ok": false,
+    "after_ok": true
+  },
+  {
+    "id": "E",
+    "scenario": "Unsubscribes during the delay",
+    "expected": 0,
+    "before": 1,
+    "after": 0,
+    "before_ok": false,
+    "after_ok": true
+  }
+]

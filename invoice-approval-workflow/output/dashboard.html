@@ -1,0 +1,22 @@
+<!doctype html><meta charset=utf-8><title>Invoice approval queue (demo)</title>
+<style>
+body{font:15px system-ui;margin:32px;color:#1c2430;background:#f6f7f9}
+h1{margin:0 0 4px;font-size:22px} .sub{color:#5b6573;margin-bottom:18px}
+.demo{background:#fff7e0;border:1px solid #ecd28a;padding:8px 12px;border-radius:6px;margin-bottom:18px;font-size:13px}
+.cards{display:flex;gap:12px;margin-bottom:18px}
+.card{background:#fff;border:1px solid #dfe3e8;border-radius:8px;padding:12px 18px}
+.card b{display:block;font-size:24px}
+table{border-collapse:collapse;width:100%;background:#fff;border:1px solid #dfe3e8}
+th,td{padding:9px 11px;border-bottom:1px solid #eceff2;text-align:left;font-size:13px;vertical-align:top}
+th{background:#eef1f5} .b{padding:3px 9px;border-radius:12px;font-size:12px;white-space:nowrap}
+.ok{background:#d9f2e1;color:#14663a} .wait{background:#fff0c9;color:#7a5a00} .stop{background:#fbdada;color:#8a1f1f}
+</style>
+<h1>Invoice approval queue</h1>
+<div class=sub>Email and WhatsApp invoices -> extracted fields -> checks -> person approves -> ledger</div>
+<div class=demo>Demo with made-up sample data. Not a client's records.</div>
+<div class=cards>
+<div class=card><b>4</b>invoices in</div>
+<div class=card><b>1</b>posted after approval</div>
+<div class=card><b>2</b>need a person to look</div>
+</div>
+<table><tr><th>ID</th><th>Source</th><th>Vendor</th><th>Invoice #</th><th>Property</th><th>Category</th><th>Total</th><th>Status</th><th>Notes</th></tr><tr><td>INV-A</td><td>email</td><td>Sample Plumbing Co</td><td>4471</td><td>Maple Court Unit 4</td><td>Repairs</td><td>$186.50</td><td><span class='b ok'>Approved, posted to ledger</span></td><td>-</td></tr><tr><td>INV-B</td><td>whatsapp</td><td>Demo Electric Ltd</td><td>1029</td><td>Harbour View 12B</td><td>Electrical</td><td>$95.00</td><td><span class='b wait'>Ready for approval</span></td><td>-</td></tr><tr><td>INV-C</td><td>email</td><td>Sample Plumbing Co</td><td>4471</td><td>Maple Court Unit 4</td><td>Repairs</td><td>$186.50</td><td><span class='b stop'>Needs human review</span></td><td>Possible duplicate of INV-A</td></tr><tr><td>INV-D</td><td>email</td><td>Example Cleaning Services</td><td>-</td><td>-</td><td>Cleaning</td><td>$240.00</td><td><span class='b stop'>Needs human review</span></td><td>Missing: invoice_no, property</td></tr></table>

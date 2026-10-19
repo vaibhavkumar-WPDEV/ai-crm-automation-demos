@@ -1,0 +1,20 @@
+<!doctype html><meta charset=utf-8><title>Ops dashboard (demo)</title>
+<style>
+body{font:15px system-ui;margin:32px;color:#1c2430;background:#f6f7f9;max-width:960px}
+h1{margin:0 0 4px;font-size:22px}.sub{color:#5b6573;margin-bottom:14px}
+.demo{background:#fff7e0;border:1px solid #ecd28a;padding:8px 12px;border-radius:6px;margin-bottom:16px;font-size:13px}
+.cards{display:flex;gap:12px;margin-bottom:16px}.card{background:#fff;border:1px solid #dfe3e8;border-radius:8px;padding:10px 16px}.card b{display:block;font-size:22px}
+.ai{background:#eef3fb;border-left:4px solid #3b7dd8;padding:10px 14px;border-radius:4px;margin-bottom:16px}
+.panel{background:#fff;border:1px solid #dfe3e8;border-radius:8px;padding:12px 16px;margin-bottom:16px}
+.bar{display:flex;align-items:center;gap:10px;margin:6px 0}.bar span{width:130px}.bar i{height:14px;border-radius:3px;display:inline-block}
+table{border-collapse:collapse;width:100%;background:#fff;border:1px solid #dfe3e8}
+th,td{padding:8px 11px;border-bottom:1px solid #eceff2;text-align:left;font-size:13px}th{background:#eef1f5}
+</style>
+<h1>Operations dashboard</h1>
+<div class=sub>Task sheet -> status roll-up -> plain-English summary</div>
+<div class=demo>Demo with made-up sample data. Not a client's records.</div>
+<div class=cards><div class=card><b>8</b>tasks</div><div class=card><b>7.5h</b>saved (done)</div>
+<div class=card><b>2</b>waiting approval</div><div class=card><b>1</b>overdue</div></div>
+<div class=ai><b>Summary:</b> 3 of 8 tasks are done, saving about 7.5 hours this week. 2 items are waiting on a person's approval and 1 is overdue.</div>
+<div class=panel><b>Tasks by status</b><div class=bar><span>Done</span><i style='width:120px;background:#2e9e5b'></i><em>3</em></div><div class=bar><span>In progress</span><i style='width:80px;background:#3b7dd8'></i><em>2</em></div><div class=bar><span>Waiting approval</span><i style='width:80px;background:#d9a400'></i><em>2</em></div><div class=bar><span>Overdue</span><i style='width:40px;background:#c93a3a'></i><em>1</em></div></div>
+<table><tr><th>Task</th><th>Owner</th><th>Area</th><th>Status</th><th>Due</th></tr><tr><td>Reconcile rent payments</td><td>Bookkeeper</td><td>Accounting</td><td><b style='color:#2e9e5b'>Done</b></td><td>2026-10-12</td></tr><tr><td>Code vendor bills to property</td><td>VA 1</td><td>Accounting</td><td><b style='color:#2e9e5b'>Done</b></td><td>2026-10-13</td></tr><tr><td>Chase missing receipts</td><td>VA 2</td><td>Accounting</td><td><b style='color:#3b7dd8'>In progress</b></td><td>2026-10-20</td></tr><tr><td>Approve invoice batch</td><td>Bookkeeper</td><td>Accounting</td><td><b style='color:#d9a400'>Waiting approval</b></td><td>2026-10-21</td></tr><tr><td>Tenant maintenance requests triage</td><td>VA 1</td><td>Operations</td><td><b style='color:#2e9e5b'>Done</b></td><td>2026-10-14</td></tr><tr><td>Weekly owner report</td><td>Manager</td><td>Reporting</td><td><b style='color:#3b7dd8'>In progress</b></td><td>2026-10-22</td></tr><tr><td>Late rent reminder drafts</td><td>VA 2</td><td>Operations</td><td><b style='color:#d9a400'>Waiting approval</b></td><td>2026-10-21</td></tr><tr><td>Update dashboard sheet</td><td>Manager</td><td>Reporting</td><td><b style='color:#c93a3a'>Overdue</b></td><td>2026-10-15</td></tr></table>

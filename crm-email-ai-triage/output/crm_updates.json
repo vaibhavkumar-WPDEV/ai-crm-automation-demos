@@ -1,0 +1,18 @@
+[
+  {
+    "contact": "anna@sampleco.test",
+    "note": "AI summary: Pricing for the pilot (pricing)",
+    "users": 25,
+    "start_by": "15 nov"
+  },
+  {
+    "contact": "raj@demo-retail.test",
+    "note": "AI summary: Can't log in (support)",
+    "urgent": true
+  },
+  {
+    "contact": "raj@demo-retail.test",
+    "note": "AI summary: Meeting next week (meeting)",
+    "budget_usd": 12000
+  }
+]

@@ -1,0 +1,93 @@
+[
+  {
+    "severity": "High",
+    "workflow": "Discovery call follow-up + Meeting booked: nurture",
+    "issue": "2 active workflows send email on the same trigger (meeting_booked)",
+    "why": "Contact can get overlapping or contradictory messages",
+    "fix": "Merge into one workflow or add mutual suppression"
+  },
+  {
+    "severity": "High",
+    "workflow": "Discovery call follow-up",
+    "issue": "Delay before email with no unenrolment criteria",
+    "why": "State can change during the delay and the email still goes out",
+    "fix": "Add unenrolment criteria and a re-check branch before the send"
+  },
+  {
+    "severity": "High",
+    "workflow": "Lead assignment",
+    "issue": "14 action errors in 30 days",
+    "why": "Silent failures: leads may not be assigned",
+    "fix": "Read the error log, fix the failing action, add an alert"
+  },
+  {
+    "severity": "High",
+    "workflow": "Old webinar sequence",
+    "issue": "Delay before email with no unenrolment criteria",
+    "why": "State can change during the delay and the email still goes out",
+    "fix": "Add unenrolment criteria and a re-check branch before the send"
+  },
+  {
+    "severity": "Medium",
+    "workflow": "Discovery call follow-up",
+    "issue": "Re-enrolment ON with an email action",
+    "why": "Repeat triggers can create parallel runs and duplicate sends",
+    "fix": "Turn re-enrolment off or dedupe with a property check"
+  },
+  {
+    "severity": "Medium",
+    "workflow": "Deal stage -> Slack alert",
+    "issue": "3 action errors in 30 days",
+    "why": "Intermittent failures",
+    "fix": "Check the failing action and add monitoring"
+  },
+  {
+    "severity": "Medium",
+    "workflow": "Old webinar sequence",
+    "issue": "Looks like an expired campaign still active",
+    "why": "Enrols people for a finished event",
+    "fix": "Confirm with owner, then turn off"
+  },
+  {
+    "severity": "Low",
+    "workflow": "Discovery call follow-up",
+    "issue": "Not documented",
+    "why": "Hard to change safely",
+    "fix": "Write one paragraph: purpose, trigger, side effects"
+  },
+  {
+    "severity": "Low",
+    "workflow": "Lead assignment",
+    "issue": "Not documented",
+    "why": "Hard to change safely",
+    "fix": "Write one paragraph: purpose, trigger, side effects"
+  },
+  {
+    "severity": "Low",
+    "workflow": "Deal stage -> Slack alert",
+    "issue": "No owner",
+    "why": "Nobody is accountable when it breaks",
+    "fix": "Assign an owner"
+  },
+  {
+    "severity": "Low",
+    "workflow": "Deal stage -> Slack alert",
+    "issue": "Not documented",
+    "why": "Hard to change safely",
+    "fix": "Write one paragraph: purpose, trigger, side effects"
+  },
+  {
+    "severity": "Low",
+    "workflow": "Old webinar sequence",
+    "issue": "No owner",
+    "why": "Nobody is accountable when it breaks",
+    "fix": "Assign an owner"
+  },
+  {
+    "severity": "Low",
+    "workflow": "Old webinar sequence",
+    "issue": "Not documented",
+    "why": "Hard to change safely",
+    "fix": "Write one paragraph: purpose, trigger, side effects"
+  }
+]

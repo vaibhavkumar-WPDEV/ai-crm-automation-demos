@@ -1,0 +1,84 @@
+[
+  {
+    "id": "M1",
+    "from": "+1 555 0101",
+    "text": "Hi, I'm looking for a quote on a 3 bedroom renovation in Austin. Budget around 40k.",
+    "lane": "Review",
+    "draft": "Thanks for the details (bedrooms: 3, budget usd: 40000, city: Austin, service: renovation). To prepare an estimate, could you share your postcode and a good time for a short call? This is an automated assistant; a team member reviews every reply.",
+    "flags": [],
+    "f": {
+      "bedrooms": 3,
+      "budget_usd": 40000,
+      "city": "Austin",
+      "service": "renovation"
+    },
+    "status": "Sent after approval",
+    "note": "unchanged"
+  },
+  {
+    "id": "M2",
+    "from": "+1 555 0102",
+    "text": "STOP",
+    "lane": "Opt-out",
+    "draft": "",
+    "flags": [
+      "STOP honoured, no reply drafted"
+    ],
+    "f": {},
+    "status": "Opted out",
+    "note": "no further texts"
+  },
+  {
+    "id": "M3",
+    "from": "+1 555 0103",
+    "text": "Was it my fault? Should I sue them? Tell me what to do legally.",
+    "lane": "Needs human",
+    "draft": "I can't give legal advice, but a member of our team will contact you shortly.",
+    "flags": [
+      "Legal-advice request, guardrail blocked drafted advice"
+    ],
+    "f": {},
+    "status": "Waiting for reviewer",
+    "note": "legal flag"
+  },
+  {
+    "id": "M4",
+    "from": "+1 555 0104",
+    "text": "I need help right now, I am hurt and scared",
+    "lane": "Escalate",
+    "draft": "",
+    "flags": [
+      "Possible emergency, alert a person now"
+    ],
+    "f": {},
+    "status": "Escalated, alert sent",
+    "note": "email + Teams alert (simulated)"
+  },
+  {
+    "id": "M5",
+    "from": "+1 555 0105",
+    "text": "Do you do bathroom remodels? I can start next month.",
+    "lane": "Review",
+    "draft": "Thanks for the details (service: bathroom remodel, timing: next month). To prepare an estimate, could you share your postcode and a good time for a short call? This is an automated assistant; a team member reviews every reply.",
+    "flags": [],
+    "f": {
+      "service": "bathroom remodel",
+      "timing": "next month"
+    },
+    "status": "Sent after approval",
+    "note": "edited: added booking link"
+  },
+  {
+    "id": "M6",
+    "from": "+1 555 0106",
+    "text": "wrong number",
+    "lane": "Close",
+    "draft": "",
+    "flags": [
+      "Wrong number, close thread"
+    ],
+    "f": {},
+    "status": "Closed",
+    "note": ""
+  }
+]

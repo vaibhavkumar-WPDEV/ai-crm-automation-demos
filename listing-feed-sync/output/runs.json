@@ -1,0 +1,38 @@
+[
+  {
+    "run": 1,
+    "added": 5,
+    "updated": 0,
+    "unavailable": 0,
+    "dupes_skipped": 0,
+    "result": "OK",
+    "note": ""
+  },
+  {
+    "run": 2,
+    "added": 1,
+    "updated": 4,
+    "unavailable": 1,
+    "dupes_skipped": 1,
+    "result": "OK",
+    "note": ""
+  },
+  {
+    "run": 3,
+    "added": 0,
+    "updated": 0,
+    "unavailable": 0,
+    "dupes_skipped": 0,
+    "result": "ABORTED",
+    "note": "feed timeout (simulated). Nothing changed, inventory kept."
+  },
+  {
+    "run": 4,
+    "added": 0,
+    "updated": 0,
+    "unavailable": 0,
+    "dupes_skipped": 0,
+    "result": "ABORTED",
+    "note": "Safeguard: feed would remove 4 of 5 live listings (>30%). Nothing changed, alert sent."
+  }
+]

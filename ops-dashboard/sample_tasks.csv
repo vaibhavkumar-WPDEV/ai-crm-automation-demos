@@ -1,0 +1,9 @@
+task,owner,area,status,due,hours_saved
+Reconcile rent payments,Bookkeeper,Accounting,Done,2026-10-12,3.0
+Code vendor bills to property,VA 1,Accounting,Done,2026-10-13,2.5
+Chase missing receipts,VA 2,Accounting,In progress,2026-10-20,1.5
+Approve invoice batch,Bookkeeper,Accounting,Waiting approval,2026-10-21,2.0
+Tenant maintenance requests triage,VA 1,Operations,Done,2026-10-14,2.0
+Weekly owner report,Manager,Reporting,In progress,2026-10-22,1.0
+Late rent reminder drafts,VA 2,Operations,Waiting approval,2026-10-21,1.5
+Update dashboard sheet,Manager,Reporting,Overdue,2026-10-15,0.5

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "INV-A",
+    "source": "email",
+    "vendor": "Sample Plumbing Co",
+    "invoice_no": "4471",
+    "date": "2026-10-02",
+    "property": "Maple Court Unit 4",
+    "description": "Replace kitchen tap, labour and parts",
+    "total": 186.5,
+    "category": "Repairs",
+    "state": "Approved, posted to ledger",
+    "notes": ""
+  },
+  {
+    "id": "INV-B",
+    "source": "whatsapp",
+    "vendor": "Demo Electric Ltd",
+    "invoice_no": "1029",
+    "date": "2026-10-05",
+    "property": "Harbour View 12B",
+    "description": "Smoke alarm battery check",
+    "total": 95.0,
+    "category": "Electrical",
+    "state": "Ready for approval",
+    "notes": ""
+  },
+  {
+    "id": "INV-C",
+    "source": "email",
+    "vendor": "Sample Plumbing Co",
+    "invoice_no": "4471",
+    "date": "2026-10-02",
+    "property": "Maple Court Unit 4",
+    "description": "Replace kitchen tap, labour and parts",
+    "total": 186.5,
+    "category": "Repairs",
+    "state": "Needs human review",
+    "notes": "Possible duplicate of INV-A"
+  },
+  {
+    "id": "INV-D",
+    "source": "email",
+    "vendor": "Example Cleaning Services",
+    "invoice_no": null,
+    "date": "2026-10-07",
+    "property": null,
+    "description": "End of tenancy clean",
+    "total": 240.0,
+    "category": "Cleaning",
+    "state": "Needs human review",
+    "notes": "Missing: invoice_no, property"
+  }
+]

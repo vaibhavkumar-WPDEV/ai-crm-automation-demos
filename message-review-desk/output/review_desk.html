@@ -1,0 +1,50 @@
+<!doctype html><meta charset=utf-8><title>Review desk (demo)</title>
+<style>
+body{font:15px system-ui;margin:32px;color:#1c2430;background:#f6f7f9;max-width:900px}
+h1{margin:0 0 4px;font-size:22px}.sub{color:#5b6573;margin-bottom:14px}
+.demo{background:#fff7e0;border:1px solid #ecd28a;padding:8px 12px;border-radius:6px;margin-bottom:16px;font-size:13px}
+.cards{display:flex;gap:12px;margin-bottom:16px}.card{background:#fff;border:1px solid #dfe3e8;border-radius:8px;padding:10px 16px}.card b{display:block;font-size:22px}
+.row{background:#fff;border:1px solid #dfe3e8;border-radius:8px;padding:12px 14px;margin-bottom:10px}
+.head{margin-bottom:6px}.msg{font-style:italic;margin-bottom:4px}.meta{color:#5b6573;font-size:13px}
+.draft{background:#eef3fb;border-radius:6px;padding:6px 10px;margin:6px 0;font-size:14px}
+.b{padding:2px 9px;border-radius:12px;font-size:12px;margin-left:8px}
+.ok{background:#d9f2e1;color:#14663a}.wait{background:#fff0c9;color:#7a5a00}.stop{background:#fbdada;color:#8a1f1f}.gray{background:#e6e9ee;color:#444}
+.flag{background:#fbdada;color:#8a1f1f;border-radius:4px;padding:2px 7px;font-size:12px;margin-right:8px}.note{color:#5b6573;font-size:12px}
+</style>
+<h1>Message review desk</h1>
+<div class=sub>Inbound text -> fields saved -> draft -> guardrails -> person approves, edits, rejects or escalates</div>
+<div class=demo>Demo with made-up test messages. Drafts are template based, no live SMS or AI provider is connected.</div>
+<div class=cards><div class=card><b>6</b>messages</div><div class=card><b>2</b>sent after approval</div>
+<div class=card><b>1/2</b>drafts sent unchanged</div>
+<div class=card><b>1</b>escalated</div></div>
+<div class=row>
+<div class=head><b>M1</b> +1 555 0101 <span class='b ok'>Sent after approval</span></div>
+<div class=msg>"Hi, I&#x27;m looking for a quote on a 3 bedroom renovation in Austin. Budget around 40k."</div>
+<div class=meta>Saved fields: bedrooms: 3, budget_usd: 40000, city: Austin, service: renovation</div>
+<div class=draft>Draft: Thanks for the details (bedrooms: 3, budget usd: 40000, city: Austin, service: renovation). To prepare an estimate, could you share your postcode and a good time for a short call? This is an automated assistant; a team member reviews every reply.</div>
+<div><span class=note>unchanged</span></div></div><div class=row>
+<div class=head><b>M2</b> +1 555 0102 <span class='b gray'>Opted out</span></div>
+<div class=msg>"STOP"</div>
+<div class=meta>Saved fields: none</div>
+<div class=draft>No reply drafted</div>
+<div><span class='flag'>STOP honoured, no reply drafted</span><span class=note>no further texts</span></div></div><div class=row>
+<div class=head><b>M3</b> +1 555 0103 <span class='b wait'>Waiting for reviewer</span></div>
+<div class=msg>"Was it my fault? Should I sue them? Tell me what to do legally."</div>
+<div class=meta>Saved fields: none</div>
+<div class=draft>Draft: I can&#x27;t give legal advice, but a member of our team will contact you shortly.</div>
+<div><span class='flag'>Legal-advice request, guardrail blocked drafted advice</span><span class=note>legal flag</span></div></div><div class=row>
+<div class=head><b>M4</b> +1 555 0104 <span class='b stop'>Escalated, alert sent</span></div>
+<div class=msg>"I need help right now, I am hurt and scared"</div>
+<div class=meta>Saved fields: none</div>
+<div class=draft>No reply drafted</div>
+<div><span class='flag'>Possible emergency, alert a person now</span><span class=note>email + Teams alert (simulated)</span></div></div><div class=row>
+<div class=head><b>M5</b> +1 555 0105 <span class='b ok'>Sent after approval</span></div>
+<div class=msg>"Do you do bathroom remodels? I can start next month."</div>
+<div class=meta>Saved fields: service: bathroom remodel, timing: next month</div>
+<div class=draft>Draft: Thanks for the details (service: bathroom remodel, timing: next month). To prepare an estimate, could you share your postcode and a good time for a short call? This is an automated assistant; a team member reviews every reply.</div>
+<div><span class=note>edited: added booking link</span></div></div><div class=row>
+<div class=head><b>M6</b> +1 555 0106 <span class='b gray'>Closed</span></div>
+<div class=msg>"wrong number"</div>
+<div class=meta>Saved fields: none</div>
+<div class=draft>No reply drafted</div>
+<div><span class='flag'>Wrong number, close thread</span><span class=note></span></div></div>
